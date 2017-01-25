@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => 'auth'], function(){
+	Route::get('/account', 'UserController@account');
+	Route::post('/account/update/{id}', 'UserController@updateAccount');
+});
