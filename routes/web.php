@@ -22,4 +22,5 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/account', 'UserController@account');
 	Route::post('/account/update/{id}', 'UserController@updateAccount');
+	Route::post('/password/update/{id}', 'UserController@updatePassword');
 });
