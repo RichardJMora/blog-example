@@ -16,10 +16,10 @@
                 </h1>
 
                 <!-- First Blog Post -->
-                @foreach ($posts as $key => $post)
+                @foreach ($posts as $post)
                     
                     <h2>
-                        <a href="{{ $post->slug }}">{{ $post->title }}</a>
+                        <a href="/post/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
                     <p class="lead">
                         by <a href="#">{{ $post->user->name }}</a>
