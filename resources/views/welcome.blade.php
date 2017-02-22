@@ -22,18 +22,18 @@
                         <a href="/post/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
                     <p class="lead">
-                        by <a href="#">{{ $post->user->name }}</a>
+                        by <a href="user/{{$post->user->id}}">{{ $post->user->name }}</a>
                     </p>
                     <p>
                         <span class="glyphicon glyphicon-time"></span>
-                         Posted on {{ $post->created_at }}
+                         Posted on {{ $post->created_at->format("F j, Y, g:i a")}}
                     </p>
                     <hr>
                     <img class="img-responsive" src="{{ $post->image }}" alt="">
                     <hr>
                     <p>{{ $post->body }}
                     </p>
-                    <a class="btn btn-primary" href="{{ $post->slug }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn btn-primary" href="/post/{{ $post->id }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                     <hr>
                 @endforeach
                 <!-- Pager -->
