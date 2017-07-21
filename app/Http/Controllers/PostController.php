@@ -11,7 +11,8 @@ class PostController extends Controller
     public function index()
     {
     	$posts = Post::all();
-    	return view('welcome', compact('posts'));
+        return response()->json($posts);
+    	//return view('welcome', compact('posts'));
     }
 
     public function show($id)

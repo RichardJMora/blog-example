@@ -17,7 +17,7 @@ use App\User;
 //
 Route::get('/users', function (Request $request) {
     $users = User::all();
-    return response()->json($users);
-    
+    return response()->json($users);   
 });
-//-
+
+Route::get('/posts', 'PostController@index');
