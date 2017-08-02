@@ -20,4 +20,5 @@ Route::get('/users', function (Request $request) {
     return response()->json($users);   
 });
 
-Route::get('/posts', 'PostController@index');
+Route::get('/posts', 'PostController@indexApi');
+Route::post('/posts', 'PostController@indexApi');

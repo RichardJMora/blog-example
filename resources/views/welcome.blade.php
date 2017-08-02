@@ -12,7 +12,7 @@
             <div class="col-md-8">
                 <h1 class="page-header">
                     Blog Example
-                    <small>With laravel 5.4</small>
+                    <small>With laravel 5.4 @{{ test }}</small>
                 </h1>
 
                 <!-- First Blog Post -->
